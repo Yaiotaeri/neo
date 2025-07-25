@@ -1,0 +1,477 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    /* background-image: linear-gradient(to bottom, rgb(26, 10, 97), rgb(30, 12, 110)); */
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+ input{
+    width: 16rem;
+    height: 3rem;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 20px;
+ }
+
+ h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #151e30;
+  }
+
+  h1{
+    font-size: 35px;
+    margin-bottom: 0.5rem;
+
+  }
+  h2{
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+  }
+  h3{
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+
+  .twoAssuntI h1{
+    font-size: 30px;
+  }
+
+  .twoAssuntI h3{
+    font-size: 18px;
+  }
+ button{
+     width: 14rem;
+  height: 3rem;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background-image: linear-gradient(135deg, #ff6600, #d15807);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 1px 2px black;
+  cursor: pointer;
+  box-shadow: 0 0 20px #d158079c, 0 0 8px rgba(255, 255, 255, 0.4) inset;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease-in-out;
+  transform: skewX(-20deg);
+}
+
+button:hover::after {
+  left: 100%;
+}
+
+button:hover {
+  background-image: linear-gradient(135deg, #ff6600, #d15807);
+  box-shadow: 0 0 25px #ff6600, 0 0 30px #d158079c;
+  transform: scale(1.03);
+}
+
+.menu{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.644);
+    background-image: linear-gradient(-45deg, rgb(255, 94, 0),rgb(255, 136, 0));
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+}
+
+.menuI{
+    width: 98%;
+    height: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px rgb(154, 106, 230);
+    cursor: pointer;
+}
+
+.logo h1:hover{
+    color: rgb(237, 242, 248);
+    text-shadow: 0 0 15px rgb(20, 233, 233);
+}
+
+#btnMenu{
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.activeMenu{
+    animation:animationBtnMenu 500ms ease forwards;
+}
+
+
+
+@keyframes animationBtnMenu{
+    0%{
+        background: none;
+    }
+    50%{
+        background: rgb(122, 255, 255);
+    }
+    100%{
+        background: rgb(122, 255, 255);
+        box-shadow: 0 0 15px aquamarine;
+    }
+}
+
+.baseMenu{
+  width: 14rem;
+  border-radius: 12px;
+  position: absolute;
+  top: -14rem;
+  right: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+li, a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.baseMenu ul{
+    list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+
+}
+
+.baseMenu ul li{
+   width: 100%;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+
+.baseMenu ul li a{
+    font-size: 20px;
+  font-weight: 600;
+  color: #1B263B;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.baseMenu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ff6600;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.baseMenu ul li a:hover::after {
+  width: 100%;
+}
+
+.baseMenu ul li a:hover {
+  color: #ff6600;
+  text-shadow: 0 0 5px #ff6600;
+}
+
+
+
+
+.openMenu{
+    animation: openMenu 500ms ease-in forwards;
+}
+
+@keyframes openMenu{
+    0%{
+        top: -12rem;
+    }
+
+    100%{
+        top: 6rem;
+    }
+}
+
+
+/* primeira sessao */
+
+.oneAssunt{
+    width: 100%;
+    height: 87.5vh;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.oneAssuntI{
+        width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    gap: 1rem; /* Espaço entre título, subtítulo e botão */
+    max-width: 600px; /* Para não ficar largo demais */
+    padding: 20px;
+    align-items: center; /* Adiciona isso para centralizar o conteúdo */
+    text-align: center;
+
+}
+
+
+.baseImg{
+     width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Corta se imagem passar */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra elegante */
+    border-radius: 20px;
+    background: #f2f2f2; /* fundo neutro se imagem demorar a carregar */
+    cursor: pointer;
+}
+
+.baseImg img{
+     width: 100%;
+    height: 100%;
+    object-fit: cover; /* mantém proporção e preenche o espaço */
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.baseImg img:hover {
+    transform: scale(1.03); /* leve zoom ao passar o mouse */
+}
+
+
+.baseContactForm{
+     width: 100%;
+  background: linear-gradient(135deg, #f8f8f8, #e9e9e9);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.baseContactForm form{
+    width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+.baseContactForm label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1B263B;
+}
+
+.baseContactForm input,
+.baseContactForm textarea {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.baseContactForm input:focus,
+.baseContactForm textarea:focus {
+  border-color: #ff6600;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 102, 0, 0.3);
+}
+
+.baseContactForm textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contactInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.contactInfo img {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0.5rem;
+}
+
+.contactInfo img:hover {
+  transform: scale(1.1);
+}
+
+footer{
+    width: 100%;
+    height: 6rem;
+    background: #1B263B;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.neoInvest{
+    position: relative;
+     cursor: pointer;
+}
+
+.neoInvest::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #293f6b;
+    bottom: -1px;
+    transition: width 0.2s ease-in;
+}
+
+.neoInvest:hover::after{
+    width: 100%;
+}
+.neoInvest:hover{
+    text-shadow: 0 0 15px orangered;
+}
+
+.separerWave {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin: 0;
+  background: none;
+  display: flex;
+}
+.separerWave svg {
+  display: block;
+  width: 100%;
+  height: 200px; /* AUMENTADA */
+  background: #f2f2f2;
+  margin-top: 3rem;
+
+}
+.popUp{
+  width: 12rem;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  padding: 5px;
+  z-index: 2000;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 0 12px black;
+  display: none;
+  opacity: 1;
+  transition: opacity 2s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.offPopUp{
+  opacity: 0;
+}
+
+/* Quando a tela for menor que 1176px */
+@media (max-width: 1176px) {
+  .baseImg {
+    max-width: 90%;
+    max-height: 400px;
+  }
+}
+
+/* Quando a tela for menor que 1000px */
+@media (max-width: 1000px) {
+  .oneAssunt {
+    flex-direction: column; /* Coloca o texto em cima e a imagem embaixo */
+    height: auto; /* Deixa a altura se ajustar automaticamente */
+  }
+
+  .oneAssuntI {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .baseImg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .baseImg img {
+    width: 100%;
+    height: auto;
+  }
+   h1{
+    font-size: 20px !important;
+
+
+  }
+  .separerWave svg {
+  height: 100px;
+  margin: 0;
+
+}
+
+}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header class="menu">
+        <div class="menuI">
+            <div class="logo"><h1>Neo Soluções Empresáriais</h1></div>
+
+            <img id="btnMenu" src="../static/imgs/perfil.png" alt="btnMenu">
+        </div>
+    </header>
+<div class="baseMenu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="popUp">
+        </div>
+
+
+        <div class="oneAssunt">
+            <section class="oneAssuntI">
+                <h1>Transforme o Atendimento e a Gestão da Sua Empresa com IA e Automação!</h1>
+                <h3>Soluções inteligentes em atendimento ao cliente, contabilidade e produtividade para otimizar seu negócio</h3>
+                <button id="goWtszp">Quero saber mais</button>
+
+
+            </section>
+
+            <div class="baseImg">
+                <img src="../static/imgs/oneImg.jpg" alt="oneImg">
+            </div>
+        </div>
+
+        <div class="separerWave">
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path fill="#ff6600" fill-opacity="1" d="M0,96L40,106.7C80,117,160,139,240,160C320,181,400,203,480,202.7C560,203,640,181,720,176C800,171,880,181,960,186.7C1040,192,1120,192,1200,170.7C1280,149,1360,107,1400,85.3L1440,64L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+  </svg>
+</div>
+
+         <div class="oneAssunt" id="sobre">
+             <div class="baseImg">
+                <img src="../static/imgs/twoimg.jpeg" alt="oneImg">
+            </div>
+            <section class="oneAssuntI twoAssuntI ">
+                <h1>Atendimento Automatizado com Chatwoot + IA:</h1>
+                <h3>Chatbots inteligentes para WhatsApp, e-mail e redes sociais, reduzindo custos e melhorando o atendimento.</h3>
+                
+                <h1>Gestão Financeira e Contábil com IA:</h1>
+                <h3>Automatize processos contábeis, emissão de notas, relatórios e análise de dados com nossa solução.</h3>
+                
+                <h1>Integração com Ferramentas Empresariais:</h1>
+                <h3>Conectamos seu CRM, ERP e sistemas de atendimento para um fluxo de trabalho mais eficiente</h3>
+                
+                
+                <button id="goWtszp">Quero saber mais</button>
+
+
+            </section>
+
+        </div>
+
+
+        <div class="baseContactForm" id="contato">
+  <form id="sendEmail">
+    <label for="name">Seu Nome</label>
+    <input type="text" id="nameForm" name="name" placeholder="Digite seu nome" required>
+
+    <label for="email">Seu E-mail</label>
+    <input type="email" id="emailForm" name="email" placeholder="Digite seu e-mail" required>
+
+    <label for="tel">Seu Telefone</label>
+    <input type="text" id="telForm" name="tel" placeholder="(00)00000-0000" maxlength="14">
+
+    <label for="mensagem">Mensagem</label>
+    <textarea id="mensagemForm" name="mensagem" placeholder="Escreva sua mensagem..." rows="5" required></textarea>
+
+    <div class="contactInfo"><button type="submit">Enviar e-mail</button> <img id="btnWtszp" src="../static/imgs/wtszp.png" alt="whatsapp" width="48px"></div>
+  </form>
+</div>
+
+<footer>
+    <p>Todos direitos reservados <span class="neoInvest">@NeoInvest</span></p>
+
+</footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='email.js') }}"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
